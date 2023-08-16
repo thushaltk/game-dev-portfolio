@@ -74,14 +74,14 @@ export default function Intro() {
           <Typography
             style={{ color: "white", fontSize: "18px", textAlign: "center" }}
           >
-            Greetings! I'm Thushal Tharaka Kulatilake, often recognized as
+            Greetings! I am Thushal Tharaka Kulatilake, often recognized as
             "ThuzhalTK," an aspiring game developer currently pursuing my
             undergraduate studies at the University of Kelaniya. Embarking on a
             journey through the realm of Information Communication Technology
             with a specialization in Games and Animation Development, I am a
             23-year-old enthusiast passionate about the art and science of game
             creation. My creative journey has led me to dive into the
-            captivating world of game development, where I've harnessed the
+            captivating world of game development, where I have harnessed the
             power of Unity and Unreal Engine to craft engaging 2D and 3D games
             for both Android and PC platforms. As I continue to explore the
             endless possibilities within this dynamic field, I invite you to
