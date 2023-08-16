@@ -75,9 +75,9 @@ export default function Intro() {
             style={{ color: "white", fontSize: "18px", textAlign: "center" }}
           >
             Greetings! I am Thushal Tharaka Kulatilake, often recognized as
-            <strong>ThuzhalTK</strong> an aspiring game developer currently
-            pursuing my undergraduate studies at the University of Kelaniya.
-            Embarking on a journey through the realm of Information
+            &nbsp;<strong>ThuzhalTK</strong> an aspiring game developer
+            currently pursuing my undergraduate studies at the University of
+            Kelaniya. Embarking on a journey through the realm of Information
             Communication Technology with a specialization in Games and
             Animation Development, I am a 23-year-old enthusiast passionate
             about the art and science of game creation. My creative journey has
