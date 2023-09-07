@@ -3,8 +3,11 @@ import Logo from "./logo/page";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Intro from "./intro/page";
+import { useMediaQuery } from "react-responsive";
+import Mobile1200px from "./mobile/mobile_1200px/page";
 
 export default function Home() {
+  const isResponsive = useMediaQuery({ query: "(max-width: 1172px)" });
   const [loading, setLoading] = useState<boolean>(false);
   const [loading2, setLoading2] = useState<boolean>(false);
 
@@ -17,8 +20,16 @@ export default function Home() {
     }, 9500);
   }, []);
 
+  const gotoArtStation = () => {
+    window.open(
+      "https://thuzhaltk.artstation.com/"
+    );
+  }
+
   return (
     <>
+    {isResponsive ? (<Mobile1200px/>) : (
+      <>
       <div
         style={{ height: "100%", width: "100%", position: "absolute" }}
         className="flex flex-row items-center justify-between	 bg-black"
@@ -41,7 +52,7 @@ export default function Home() {
           {loading ? (
             <div
               className="w-fit absolute"
-              style={{ paddingLeft: "250px", paddingTop: "80px" }}
+              style={{ paddingLeft: "250px", paddingTop: "60px" }}
             >
               <motion.h1
                 style={{ fontFamily: "tenorite" }}
@@ -83,6 +94,7 @@ export default function Home() {
           {loading2 ? (
             <a
               href="#"
+              onClick={gotoArtStation}
               style={{
                 color: "gray",
                 fontSize: "23px",
@@ -99,7 +111,7 @@ export default function Home() {
           )}
         </motion.div>
       </div>
-      {loading2 ? (
+      <>{loading2 ? (
         <>
           <Intro />
           <motion.div
@@ -176,7 +188,13 @@ export default function Home() {
         </>
       ) : (
         ""
-      )}
+      )
+      }</>
+      </>
+      
+      )
+      }
+      
     </>
   );
 }
