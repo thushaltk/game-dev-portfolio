@@ -1,9 +1,9 @@
 "use client";
 import { Typography } from "@mui/material";
-import me from "../../public/imgs/me_ai.jpg";
+import me from "../../../../public/imgs/me_ai.jpg";
 import { motion } from "framer-motion";
 
-export default function Intro() {
+export default function IntroWebView() {
   return (
     <div
       style={{
@@ -72,7 +72,12 @@ export default function Intro() {
           }}
         >
           <Typography
-            style={{ color: "white", fontSize: "18px", textAlign: "center" }}
+            style={{
+              color: "white",
+              fontSize: "18px",
+              textAlign: "center",
+              lineHeight: "1.7",
+            }}
           >
             Greetings! I am Thushal Tharaka Kulatilake, often recognized as
             &nbsp;<strong>ThuzhalTK</strong> an aspiring game developer

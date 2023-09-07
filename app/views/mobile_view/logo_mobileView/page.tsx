@@ -1,17 +1,14 @@
 "use client";
-import logo from "../../public/imgs/logo.png";
+import logo from "../../../../public/imgs/logo.png";
 import { motion } from "framer-motion";
 
-export default function Logo() {
+export default function LogoMobileView() {
   return (
     <motion.div
-      style={{ width: "10%", height: "10%" }}
+      style={{ width: "20%", height: "20%", marginTop: "30px" }}
       initial={{ x: 0 }}
-      animate={{
-        x: "-65%",
-      }}
       transition={{
-        delay: 2.5,
+        delay: 1,
         duration: 1,
         ease: "easeInOut",
         times: [0, 1],
