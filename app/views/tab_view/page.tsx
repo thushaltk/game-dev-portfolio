@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import IntroTabView from "./intro_tabView/page";
 import LogoTabView from "./logo_tabView/page";
 import ProjectsTabView from "./projects_tabView/page";
-import { projectsArray } from "@/app/data/projects";
+import { projectsArray } from "../../data/projects";
 
 export default function TabView() {
   const [loading, setLoading] = useState<boolean>(false);

@@ -40,7 +40,7 @@ export default function ProjectsTabView(props: any) {
           width: "100%",
           height: "fit-content",
           textAlign: "center",
-          marginBottom: "30px",
+          marginBottom: "40px",
         }}
       >
         <h1
