@@ -18,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        style={{ width: "100%", height: "100%" }}
+        style={{ width: "100%", height: "100%", fontFamily: "Tenorite" }}
         className={inter.className}
       >
+        <link href="https://fonts.cdnfonts.com/css/tenorite" rel="stylesheet" />
+
         {children}
       </body>
     </html>

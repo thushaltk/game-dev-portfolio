@@ -3,6 +3,8 @@ import LogoWebView from "./logo_webView/page";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import IntroWebView from "./intro_webView/page";
+import ProjectsWebView from "./projects_webView/page";
+import { projectsArray } from "../../data/projects";
 
 export default function WebView() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -108,77 +110,7 @@ export default function WebView() {
         {loading2 ? (
           <>
             <IntroWebView />
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{
-                scale: [0.9, 1],
-                opacity: [0, 1],
-              }}
-              transition={{
-                duration: 1,
-                ease: "easeInOut",
-                times: [0, 1],
-              }}
-              style={{
-                width: "100%",
-                height: "80%",
-                position: "absolute",
-                marginTop: "700px",
-                paddingLeft: "50px",
-                paddingRight: "50px",
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-              className="bg-black"
-            >
-              <div
-                style={{
-                  width: "30%",
-                  height: "85%",
-                }}
-                className="bg-white items-center justify-center"
-              ></div>
-              <div
-                style={{
-                  width: "30%",
-                  height: "85%",
-                }}
-                className="bg-white items-center justify-center"
-              ></div>
-              <div
-                style={{
-                  width: "30%",
-                  height: "85%",
-                }}
-                className="bg-white items-center justify-center"
-              ></div>
-              <div
-                style={{
-                  width: "30%",
-                  height: "85%",
-                  marginTop: "20px",
-                }}
-                className="bg-white items-center justify-center"
-              ></div>
-              <div
-                style={{
-                  width: "30%",
-                  height: "85%",
-                  marginTop: "20px",
-                }}
-                className="bg-white items-center justify-center"
-              ></div>
-              <div
-                style={{
-                  width: "30%",
-                  height: "85%",
-                  marginTop: "20px",
-                }}
-                className="bg-white items-center justify-center"
-              ></div>
-            </motion.div>
+            <ProjectsWebView data={projectsArray} />
           </>
         ) : (
           ""

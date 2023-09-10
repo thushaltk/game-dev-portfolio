@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import IntroTabView from "./intro_tabView/page";
 import LogoTabView from "./logo_tabView/page";
+import ProjectsTabView from "./projects_tabView/page";
+import { projectsArray } from "@/app/data/projects";
 
 export default function TabView() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -107,80 +109,7 @@ export default function TabView() {
       {loading2 ? (
         <>
           <IntroTabView />
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{
-              scale: [0.9, 1],
-              opacity: [0, 1],
-            }}
-            transition={{
-              duration: 1,
-              ease: "easeInOut",
-              times: [0, 1],
-            }}
-            style={{
-              width: "100%",
-              height: "500px",
-              position: "absolute",
-              marginTop: "700px",
-              paddingLeft: "50px",
-              paddingRight: "50px",
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-            className="bg-black"
-          >
-            <div
-              style={{
-                width: "48%",
-                height: "85%",
-                marginTop: "20px",
-              }}
-              className="bg-white items-center justify-center"
-            ></div>
-            <div
-              style={{
-                width: "48%",
-                height: "85%",
-                marginTop: "20px",
-              }}
-              className="bg-white items-center justify-center"
-            ></div>
-            <div
-              style={{
-                width: "48%",
-                height: "85%",
-                marginTop: "20px",
-              }}
-              className="bg-white items-center justify-center"
-            ></div>
-            <div
-              style={{
-                width: "48%",
-                height: "85%",
-                marginTop: "20px",
-              }}
-              className="bg-white items-center justify-center"
-            ></div>
-            <div
-              style={{
-                width: "48%",
-                height: "85%",
-                marginTop: "20px",
-              }}
-              className="bg-white items-center justify-center"
-            ></div>
-            <div
-              style={{
-                width: "48%",
-                height: "85%",
-                marginTop: "20px",
-              }}
-              className="bg-white items-center justify-center"
-            ></div>
-          </motion.div>
+          <ProjectsTabView data={projectsArray} />
         </>
       ) : (
         ""

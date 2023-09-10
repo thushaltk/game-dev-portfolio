@@ -77,6 +77,7 @@ export default function IntroWebView() {
               fontSize: "18px",
               textAlign: "center",
               lineHeight: "1.7",
+              fontFamily: "Tenorite",
             }}
           >
             Greetings! I am Thushal Tharaka Kulatilake, often recognized as

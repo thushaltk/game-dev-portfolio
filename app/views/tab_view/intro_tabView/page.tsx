@@ -80,6 +80,7 @@ export default function IntroTabView() {
               fontSize: "15px",
               textAlign: "justify",
               padding: "30px",
+              fontFamily: "Tenorite",
             }}
           >
             Greetings! I am Thushal Tharaka Kulatilake, often recognized as

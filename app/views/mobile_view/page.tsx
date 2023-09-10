@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import IntroMobileView from "./intro_mobileView/page";
 import LogoMobileView from "./logo_mobileView/page";
+import ProjectsMobileView from "./projects_mobileView/page";
+import { projectsArray } from "../../data/projects";
 
 export default function MobileView() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -80,79 +82,7 @@ export default function MobileView() {
       {loading2 ? (
         <>
           <IntroMobileView />
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{
-              scale: [0.9, 1],
-              opacity: [0, 1],
-            }}
-            transition={{
-              duration: 1,
-              ease: "easeInOut",
-              times: [0, 1],
-            }}
-            style={{
-              width: "100%",
-              height: "fit-content",
-              position: "absolute",
-              marginTop: "700px",
-              paddingLeft: "50px",
-              paddingRight: "50px",
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "column",
-            }}
-            className="bg-black"
-          >
-            <div
-              style={{
-                width: "100%",
-                height: "300px",
-                marginTop: "20px",
-              }}
-              className="bg-white items-center justify-center"
-            ></div>
-            <div
-              style={{
-                width: "100%",
-                height: "300px",
-                marginTop: "20px",
-              }}
-              className="bg-white items-center justify-center"
-            ></div>
-            <div
-              style={{
-                width: "100%",
-                height: "300px",
-                marginTop: "20px",
-              }}
-              className="bg-white items-center justify-center"
-            ></div>
-            <div
-              style={{
-                width: "100%",
-                height: "300px",
-                marginTop: "20px",
-              }}
-              className="bg-white items-center justify-center"
-            ></div>
-            <div
-              style={{
-                width: "100%",
-                height: "300px",
-                marginTop: "20px",
-              }}
-              className="bg-white items-center justify-center"
-            ></div>
-            <div
-              style={{
-                width: "100%",
-                height: "300px",
-                marginTop: "20px",
-              }}
-              className="bg-white items-center justify-center"
-            ></div>
-          </motion.div>
+          <ProjectsMobileView data={projectsArray} />
         </>
       ) : (
         ""

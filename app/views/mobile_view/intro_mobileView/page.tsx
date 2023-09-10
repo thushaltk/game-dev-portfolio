@@ -11,7 +11,7 @@ export default function IntroMobileView() {
         height: "500px",
         backgroundColor: "black",
         position: "absolute",
-        marginTop: "130px",
+        marginTop: "150px",
         paddingLeft: "50px",
         paddingRight: "50px",
         display: "flex",
@@ -73,7 +73,12 @@ export default function IntroMobileView() {
           }}
         >
           <Typography
-            style={{ color: "white", fontSize: "11px", textAlign: "center" }}
+            style={{
+              color: "white",
+              fontSize: "11px",
+              textAlign: "center",
+              fontFamily: "Tenorite",
+            }}
           >
             Greetings! I am Thushal Tharaka Kulatilake, often recognized as
             &nbsp;<strong>ThuzhalTK</strong> an aspiring game developer
