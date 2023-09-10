@@ -15,7 +15,7 @@ export default function ProjectsMobileView(props: any) {
         width: "100%",
         height: "fit-content",
         position: "absolute",
-        marginTop: "700px",
+        marginTop: "830px",
         paddingLeft: "50px",
         paddingRight: "50px",
         display: "flex",
@@ -32,7 +32,7 @@ export default function ProjectsMobileView(props: any) {
           height: "fit-content",
           textAlign: "center",
           marginBottom: "20px",
-          marginTop: "40px",
+          marginTop: "20px",
         }}
       >
         <h1
@@ -71,6 +71,7 @@ export default function ProjectsMobileView(props: any) {
                 width: "100%",
                 height: "300px",
                 marginBottom: "50px",
+                borderRadius: "20px",
               }}
               className="bg-white items-center justify-center"
             >
@@ -79,6 +80,7 @@ export default function ProjectsMobileView(props: any) {
                 style={{
                   width: "100%",
                   height: "100%",
+                  borderRadius: "20px",
                 }}
               />
             </motion.div>

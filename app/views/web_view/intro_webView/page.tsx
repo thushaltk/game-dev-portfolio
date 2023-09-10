@@ -2,8 +2,10 @@
 import { Typography } from "@mui/material";
 import me from "../../../../public/imgs/me_ai.jpg";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 export default function IntroWebView() {
+  const webLarge = useMediaQuery({ minWidth: 1024 });
   return (
     <div
       style={{

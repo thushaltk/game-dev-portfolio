@@ -10,9 +10,9 @@ export default function Home() {
   const [isResponsiveTab, setIsResponsiveTab] = useState(false);
   const [isResponsiveMobile, setIsResponsiveMobile] = useState(false);
 
-  let web = useMediaQuery({ minWidth: 1172 });
-  let tab = useMediaQuery({ minWidth: 420, maxWidth: 1172 });
-  let mobile = useMediaQuery({ maxWidth: 420 });
+  let web = useMediaQuery({ minWidth: 1024 });
+  let tab = useMediaQuery({ minWidth: 430, maxWidth: 1023 });
+  let mobile = useMediaQuery({ maxWidth: 430 });
 
   useEffect(() => {
     if (web) {

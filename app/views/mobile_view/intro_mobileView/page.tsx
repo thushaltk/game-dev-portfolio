@@ -11,7 +11,7 @@ export default function IntroMobileView() {
         height: "500px",
         backgroundColor: "black",
         position: "absolute",
-        marginTop: "150px",
+        marginTop: "220px",
         paddingLeft: "50px",
         paddingRight: "50px",
         display: "flex",
@@ -75,7 +75,7 @@ export default function IntroMobileView() {
           <Typography
             style={{
               color: "white",
-              fontSize: "11px",
+              fontSize: "13px",
               textAlign: "center",
               fontFamily: "Tenorite",
             }}
