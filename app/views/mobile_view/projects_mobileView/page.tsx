@@ -55,7 +55,7 @@ export default function ProjectsMobileView(props: any) {
         }}
         className="bg-black"
       >
-        {data.map(
+        {data?.map(
           (project: {
             id: number;
             projectTitle: string;

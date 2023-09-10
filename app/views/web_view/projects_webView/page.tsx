@@ -62,7 +62,7 @@ export default function ProjectsWebView(props: any) {
         }}
         className="bg-black"
       >
-        {data.map(
+        {data?.map(
           (project: {
             id: number;
             projectTitle: string;
