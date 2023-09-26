@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import IntroWebView from "./intro_webView/page";
 import ProjectsWebView from "./projects_webView/page";
 import { projectsArray } from "../../data/projects";
+import { Icon } from "@iconify/react";
 
 export default function WebView() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -23,16 +24,27 @@ export default function WebView() {
     window.open("https://thuzhaltk.artstation.com/");
   };
 
+  const gotoGithub = () => {
+    window.open("https://github.com/thushaltk");
+  };
+
   return (
     <>
       <div
-        style={{ height: "100%", width: "100%", position: "absolute" }}
-        className="flex flex-row items-center justify-between	 bg-black"
+        style={{
+          height: "100%",
+          width: "100%",
+          position: "absolute",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        className="	bg-black"
       >
         <motion.div
           initial={{ y: 0 }}
           animate={{
-            y: "-43%",
+            y: "-170%",
             scale: 0.5,
           }}
           transition={{
@@ -41,14 +53,17 @@ export default function WebView() {
             ease: "easeInOut",
             times: [0, 1],
           }}
-          className="flex w-full h-full items-center justify-center"
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginBottom: "50px",
+          }}
         >
           <LogoWebView />
           {loading ? (
-            <div
-              className="w-fit absolute"
-              style={{ paddingLeft: "250px", paddingTop: "80px" }}
-            >
+            <div className="w-fit absolute" style={{ paddingLeft: "250px" }}>
               <motion.h1
                 style={{ fontFamily: "tenorite" }}
                 className="text-5xl"
@@ -70,37 +85,47 @@ export default function WebView() {
           ) : (
             ""
           )}
-        </motion.div>
-        <motion.div
-          initial={{ y: 0 }}
-          animate={{
-            y: "-43%",
-            scale: 0.5,
-          }}
-          transition={{
-            delay: 8.5,
-            duration: 1,
-            ease: "easeInOut",
-            times: [0, 1],
-          }}
-          className="flex h-full items-center justify-center"
-          style={{ textAlign: "center" }}
-        >
           {loading2 ? (
-            <a
-              href="#"
-              onClick={gotoArtStation}
+            <motion.div
+              transition={{
+                delay: 8.5,
+                duration: 1,
+                ease: "easeInOut",
+                times: [0, 1],
+              }}
+              className="flex justify-center "
               style={{
-                color: "gray",
-                fontSize: "23px",
-                marginTop: "80px",
-                marginRight: "300px",
                 position: "absolute",
-                textDecoration: "underline",
+                width: "fit-content",
+                height: "fit-content",
+                marginLeft: "175%",
               }}
             >
-              Go to my Artstation
-            </a>
+              <a
+                href="#"
+                onClick={gotoGithub}
+                style={{
+                  color: "gray",
+                  fontSize: "60px",
+                  marginRight: "50px",
+                  textDecoration: "underline",
+                }}
+              >
+                <Icon icon="ant-design:github-filled" color="white" />
+              </a>
+              <a
+                href="#"
+                onClick={gotoArtStation}
+                style={{
+                  color: "gray",
+                  fontSize: "60px",
+                  marginRight: "50px",
+                  textDecoration: "underline",
+                }}
+              >
+                <Icon icon="simple-icons:artstation" color="white" />
+              </a>
+            </motion.div>
           ) : (
             ""
           )}

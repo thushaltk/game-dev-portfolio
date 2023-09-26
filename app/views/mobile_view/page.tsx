@@ -5,6 +5,7 @@ import IntroMobileView from "./intro_mobileView/page";
 import LogoMobileView from "./logo_mobileView/page";
 import ProjectsMobileView from "./projects_mobileView/page";
 import { projectsArray } from "../../data/projects";
+import { Icon } from "@iconify/react";
 
 export default function MobileView() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -21,6 +22,10 @@ export default function MobileView() {
 
   const gotoArtStation = () => {
     window.open("https://thuzhaltk.artstation.com/");
+  };
+
+  const gotoGithub = () => {
+    window.open("https://github.com/thushaltk");
   };
 
   return (
@@ -44,36 +49,47 @@ export default function MobileView() {
           className="flex w-full h-full items-center justify-center"
         >
           <LogoMobileView />
-        </motion.div>
-        <motion.div
-          initial={{ y: 0 }}
-          animate={{
-            y: "-45%",
-            scale: 0.5,
-          }}
-          transition={{
-            delay: 2,
-            duration: 1,
-            ease: "easeInOut",
-            times: [0, 1],
-          }}
-          className="flex h-full items-center justify-center"
-          style={{ textAlign: "center" }}
-        >
           {loading2 ? (
-            <a
-              href="#"
-              onClick={gotoArtStation}
+            <motion.div
+              transition={{
+                delay: 8.5,
+                duration: 1,
+                ease: "easeInOut",
+                times: [0, 1],
+              }}
+              className="flex justify-center "
               style={{
-                color: "gray",
-                fontSize: "13px",
-                marginRight: "130px",
                 position: "absolute",
-                textDecoration: "underline",
+                width: "fit-content",
+                height: "fit-content",
+                marginLeft: "168%",
               }}
             >
-              Go to my Artstation
-            </a>
+              <a
+                href="#"
+                onClick={gotoGithub}
+                style={{
+                  color: "gray",
+                  fontSize: "30px",
+                  marginRight: "25px",
+                  textDecoration: "underline",
+                }}
+              >
+                <Icon icon="ant-design:github-filled" color="white" />
+              </a>
+              <a
+                href="#"
+                onClick={gotoArtStation}
+                style={{
+                  color: "gray",
+                  fontSize: "30px",
+                  marginRight: "20px",
+                  textDecoration: "underline",
+                }}
+              >
+                <Icon icon="simple-icons:artstation" color="white" />
+              </a>
+            </motion.div>
           ) : (
             ""
           )}

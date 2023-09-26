@@ -15,7 +15,7 @@ export default function ProjectsMobileView(props: any) {
         width: "100%",
         height: "fit-content",
         position: "absolute",
-        marginTop: "830px",
+        marginTop: "870px",
         paddingLeft: "50px",
         paddingRight: "50px",
         display: "flex",
